@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Journey Audit Checklist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .section-title {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .question {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s;
+        }
+        .question:hover {
+            transform: translateY(-2px);
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .btn-primary {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+        .offer-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .offer-image {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6 min-h-screen flex items-center justify-center">
+
+<div class="container mx-auto p-8 bg-white rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Customer Journey Audit Checklist</h1>
+    <p class="text-center text-gray-600 mb-8">
+        This checklist will help you quickly assess how effectively your business converts potential customers into real buyers.<br>Check each question that is true for your business.
+    </p>
+
+    <!-- Question Sections -->
+    <div id="questions-container">
+        <!-- Stage 1 -->
+        <h2 class="text-2xl font-bold section-title text-gray-700 mb-4">Stage 1: First Contact (Attracting Attention)</h2>
+        <div class="space-y-4 mb-8">
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you have a landing page/subscription page/form on your website, etc., created exclusively for collecting contact information from potential customers?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Does this page have content that encourages a potential customer to click "Download" or "Sign Up"?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do people receive an automatic message (confirmation/file, etc.) after sharing their contact information?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <h2 class="text-2xl font-bold section-title text-gray-700 mb-4">Stage 2: Automation and Organization</h2>
+        <div class="space-y-4 mb-8">
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Is the data left by customers automatically transferred to your CRM system or an Excel file?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Is an automated series of emails or messages launched after a person leaves their information?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you or your managers receive notifications when a new interested customer appears?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Does the customer's status change automatically after their actions (e.g., when they open an email or click on a link)?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <h2 class="text-2xl font-bold section-title text-gray-700 mb-4">Stage 3: Sales and Closing the Deal</h2>
+        <div class="space-y-4 mb-8">
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you have a clear plan for working with each group of interested customers?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you know which sources bring you the best customers?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you have an automated process for sending commercial proposals or important documents?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <h2 class="text-2xl font-bold section-title text-gray-700 mb-4">Stage 4: Post-sale Service and Retention</h2>
+        <div class="space-y-4 mb-8">
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you have a clear plan of action after a customer has made a purchase?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you collect feedback?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you have loyalty programs or personalized offers for repeat purchases?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <h2 class="text-2xl font-bold section-title text-gray-700 mb-4">Stage 5: Analytics</h2>
+        <div class="space-y-4 mb-8">
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Can you easily calculate how many visitors become interested customers?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+            <div class="question flex items-center justify-between">
+                <label class="text-gray-700">Do you track how many interested customers ultimately become buyers?</label>
+                <input type="checkbox" class="form-checkbox text-blue-500 w-5 h-5 ml-4 rounded" data-points="1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="text-center mt-8">
+        <button id="calculate-btn" class="btn btn-primary">Calculate Result</button>
+    </div>
+
+    <div id="results-section" class="mt-8 p-6 bg-gray-50 rounded-lg hidden">
+        <h3 class="text-xl font-bold mb-2 text-center text-gray-800">Your Result: <span id="total-score" class="text-blue-500">0</span> points</h3>
+        <p id="verdict" class="text-lg text-center font-semibold text-gray-700 mb-4"></p>
+        <div class="text-center">
+            <p id="next-step" class="text-gray-600"></p>
+        </div>
+    </div>
+
+    <!-- Tripwire Offers Section -->
+    <div id="offers-section" class="hidden mt-12 text-center">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">One-Time Offer</h2>
+        <p class="text-gray-600 mb-8">
+            Based on your results, there are opportunities for significant growth.<br>You can receive a detailed report that will indicate several “bottlenecks” and what options are available to improve the situation.
+        </p>
+
+        <div class="flex justify-center">
+            <div class="offer-card w-full md:w-1/2">
+                <img src="https://ru.files.fm/u/9dmpg2jmq5" alt="Strategy icon" class="offer-image max-w-xs h-auto mb-4 rounded-lg">
+                <h4 class="text-lg font-bold mb-2 text-gray-800">Personal Consultation</h4>
+                <button id="book-btn" class="btn btn-primary text-2xl px-8 py-3">
+                    <s class="text-gray-500">$30</s> $10
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Section -->
+    <div id="booking-confirmation" class="hidden mt-12 p-6 bg-gray-50 rounded-lg text-center">
+        <!-- Displayed after clicking the $10 button -->
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact me within 12 hours to receive a consultation on your checklist.</h3>
+        <div id="countdown-timer" class="text-2xl font-bold text-red-500 mb-4"></div>
+        <p class="text-gray-600 mb-2">
+            <span class="text-gray-800 font-bold">My contacts:</span>
+        </p>
+        <p class="text-gray-800">
+            Instagram: <a href="https://www.instagram.com/nick.inflow" class="text-blue-600 hover:underline">@nick.inflow</a>
+        </p>
+        <p class="text-gray-800">
+            Email: <a href="mailto:odin.nickolay@gmail.com" class="text-blue-600 hover:underline">odin.nickolay@gmail.com</a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.form-checkbox');
+            const calculateBtn = document.getElementById('calculate-btn');
+            const resultsSection = document.getElementById('results-section');
+            const totalScoreSpan = document.getElementById('total-score');
+            const verdictParagraph = document.getElementById('verdict');
+            const nextStepParagraph = document.getElementById('next-step');
+            const offersSection = document.getElementById('offers-section');
+            const bookBtn = document.getElementById('book-btn');
+            const bookingConfirmation = document.getElementById('booking-confirmation');
+            const countdownTimer = document.getElementById('countdown-timer');
+
+            calculateBtn.addEventListener('click', () => {
+                let score = 0;
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        score += parseInt(checkbox.getAttribute('data-points'));
+                    }
+                });
+
+                totalScoreSpan.textContent = score;
+
+                let verdict = '';
+                let nextStepHtml = '';
+                
+                if (score >= 12) {
+                    verdict = 'Your customer journey is well-optimized!';
+                    nextStepHtml = 'Continue to improve and scale successful strategies. Perhaps it\'s worth considering new markets or products.';
+                    offersSection.classList.add('hidden');
+                } else if (score >= 7) {
+                    verdict = 'Your customer journey has a solid foundation, but needs optimization.';
+                    nextStepHtml = 'Focus on the key "bottlenecks" in your process.<br>Consider the offer to get a detailed plan.';
+                    offersSection.classList.remove('hidden');
+                } else {
+                    verdict = 'Your customer journey requires serious work.';
+                    nextStepHtml = 'It\'s time to create a clear and effective system to stop losing potential customers.<br>Consider the offer to get a detailed plan.';
+                    offersSection.classList.remove('hidden');
+                }
+
+                verdictParagraph.textContent = verdict;
+                nextStepParagraph.innerHTML = nextStepHtml;
+                resultsSection.classList.remove('hidden');
+                bookingConfirmation.classList.add('hidden'); // Hide confirmation section on re-evaluation
+            });
+
+            bookBtn.addEventListener('click', () => {
+                offersSection.classList.add('hidden');
+                bookingConfirmation.classList.remove('hidden');
+
+                // Start the 12-hour countdown timer
+                const duration = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+                const endTime = Date.now() + duration;
+
+                const timerInterval = setInterval(() => {
+                    const timeLeft = endTime - Date.now();
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        countdownTimer.textContent = 'Offer expired';
+                    } else {
+                        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                        countdownTimer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    }
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+</html>
