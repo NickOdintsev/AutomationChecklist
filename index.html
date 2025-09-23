@@ -175,15 +175,17 @@
     <div id="offers-section" class="hidden mt-12 text-center">
         <h2 class="text-2xl font-bold mb-6 text-gray-800">One-Time Offer</h2>
         <p class="text-gray-600 mb-8">
-            Based on your results, there are opportunities for significant growth.<br>You can receive a detailed report that will indicate several “bottlenecks” and what options are available to improve the situation.
+            Based on your results, there are opportunities for significant growth.<br>You can receive a detailed report that will indicate several “bottlenecks”<br>and what options are available to improve the situation.
         </p>
 
         <div class="flex justify-center">
             <div class="offer-card w-full md:w-1/2">
-                <img src="https://ru.files.fm/u/9dmpg2jmq5" alt="Strategy icon" class="offer-image max-w-xs h-auto mb-4 rounded-lg">
-                <h4 class="text-lg font-bold mb-2 text-gray-800">Personal Consultation</h4>
+                <a href="https://kept.com.ua/5Dyu/Report.png">
+                    <img src="https://kept.com.ua/thumb/5Dyu/Report.png" alt="Offer Icon" class="offer-image w-60 h-60" onerror="this.onerror=null; this.src='https://placehold.co/240x240/E5E7EB/A1A1AA?text=Image+Error';">
+                </a>
+                <h4 class="text-lg font-bold mb-2 text-gray-800">Detailed PDF report</h4>
                 <button id="book-btn" class="btn btn-primary text-2xl px-8 py-3">
-                    <s class="text-gray-500">$30</s> $10
+                    <s class="text-gray-400">$25</s> $5
                 </button>
             </div>
         </div>
@@ -191,7 +193,7 @@
 
     <!-- Booking Confirmation Section -->
     <div id="booking-confirmation" class="hidden mt-12 p-6 bg-gray-50 rounded-lg text-center">
-        <!-- Displayed after clicking the $10 button -->
+        <!-- Displayed after clicking the $5 button -->
         <h3 class="text-xl font-bold text-gray-800 mb-4">Contact me within 12 hours to receive a consultation on your checklist.</h3>
         <div id="countdown-timer" class="text-2xl font-bold text-red-500 mb-4"></div>
         <p class="text-gray-600 mb-2">
@@ -249,6 +251,9 @@
                 nextStepParagraph.innerHTML = nextStepHtml;
                 resultsSection.classList.remove('hidden');
                 bookingConfirmation.classList.add('hidden'); // Hide confirmation section on re-evaluation
+
+                // Smooth scroll to the results section
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
             });
 
             bookBtn.addEventListener('click', () => {
